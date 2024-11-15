@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Species Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+    <h1 class="title">Upload image for analysis</h1>
+    <form id="uploadForm">
+        <input type="file" id="image-upload" accept="image/*" required>
+        <button type="submit" id="predictButton">Predict Species</button>
+    </form>
+    
+    <div id="prediction-result"></div>
+    
+    <!-- Image preview element -->
+    <img id="imagePreview" class="img-preview" alt="Image preview">
+
+    <script src="index.js"></script>
+    <div id="result"></div>
+</body>
+</html>
