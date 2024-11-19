@@ -74,15 +74,29 @@ document.getElementById('predictButton').onclick = async function() {
     // Get the class name using the index
     const predictedClassName = classNames[classIndex];
 
-    // Display the predicted class name and probabilities
+    // Display the predicted class name
     const resultElement = document.getElementById('result');
     if (resultElement) {
         resultElement.innerText = `Predicted Class: ${predictedClassName}\n`;
 
-        // Add probabilities for each class
-        classNames.forEach((className, index) => {
-            const percentage = (probabilities[index] * 100).toFixed(2);  // Convert to percentage
-            resultElement.innerText += `${className}: ${percentage}%\n`;
+        // Create an array of class names and their corresponding probabilities
+        const classProbabilities = classNames.map((className, index) => {
+            return {
+                className: className,
+                probability: probabilities[index]
+            };
+        });
+
+        // Sort the array in descending order of probabilities
+        classProbabilities.sort((a, b) => b.probability - a.probability);
+
+        // Take the top 3 classes
+        const top3 = classProbabilities.slice(0, 3);
+
+        // Display the top 3 classes with their probabilities
+        top3.forEach(item => {
+            const percentage = (item.probability * 100).toFixed(2);
+            resultElement.innerText += `${item.className}: ${percentage}%\n`;
         });
     } else {
         console.error("The element with id 'result' was not found.");
