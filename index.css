@@ -1,31 +1,31 @@
 body {
-    display: flex; /* Use Flexbox for centering */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
-    font-family: Arial, sans-serif; /* Set a default font */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    font-family: Arial, sans-serif; 
 }
 
 .title {
-    margin-bottom: 20px; /* Space between title and form */
+    margin-bottom: 20px; 
 }
 
 form {
-    display: flex; /* Use Flexbox for the form layout */
-    flex-direction: column; /* Stack form elements vertically */
-    align-items: center; /* Center form elements */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
 }
 
 #result {
-    margin-top: 20px; /* Space above the result div */
-    font-weight: bold; /* Make result text bold */
+    margin-top: 20px;
+    font-weight: bold; 
 }
 
 button {
-    margin-top: 20px; /* Move the upload button down by adding margin */
+    margin-top: 20px; 
 }
 
 .img-preview {
-    display: none; /* Initially hide the image preview */
-    max-width: 300px; /* Set a maximum width for the image */
-    margin-top: 20px; /* Space above the image preview */
+    display: none; 
+    max-width: 300px; 
+    margin-top: 20px; 
 }
