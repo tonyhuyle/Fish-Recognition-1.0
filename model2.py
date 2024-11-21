@@ -73,18 +73,6 @@ base_model.trainable = True
 for layer in base_model.layers[:100]:  # Freeze initial layers, unfreeze the rest
     layer.trainable = False
 
-model = models.Sequential([
-    base_model,
-    layers.GlobalAveragePooling2D(),
-    layers.Dense(256, activation='relu'),  # Additional dense layer
-    layers.BatchNormalization(),
-    layers.Dropout(0.5),
-    layers.Dense(128, activation='relu'),
-    layers.BatchNormalization(),
-    layers.Dropout(0.5),
-    layers.Dense(num_classes, activation='softmax')
-])
-
 # Optimizer
 opt = optimizers.Adam(learning_rate=1e-4)  # Start with a slightly higher learning rate
 
