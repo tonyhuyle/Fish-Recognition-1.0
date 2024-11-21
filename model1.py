@@ -4,11 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
-from tensorflow.keras import layers, models, optimizers, regularizers
+from tensorflow.keras import layers, models, optimizers
 from tensorflow.keras.callbacks import ReduceLROnPlateau
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.callbacks import EarlyStopping, LearningRateScheduler
-from PIL import Image
 from sklearn.model_selection import train_test_split
 
 # Set image size and other parameters
